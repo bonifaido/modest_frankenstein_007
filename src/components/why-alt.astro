@@ -1,0 +1,114 @@
+---
+import Badge from "@components/ui/badge.astro";
+import { Picture } from "astro:assets";
+import WhyImg1 from "../assets/why/mature-tech.png";
+import WhyImg2 from "../assets/why/agnostic.png";
+import { Icon } from "astro-icon/components";
+import Link from "@components/ui/link.astro";
+
+const { nomargin } = Astro.props;
+---
+
+<div
+  class:list={[
+    "max-w-4xl mx-auto flex flex-col items-center justify-center",
+    !nomargin && "mt-24",
+  ]}>
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+    Security teams should manage access - Riptides solves the rest
+  </h2>
+  <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+    Riptides is like Okta for Non-Humans
+  </p>
+</div>
+
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center">
+    <Picture
+      src={WhyImg1}
+      alt="Posture Image"
+      formats={["avif", "webp"]}
+      loading="lazy"
+    />
+  </div>
+
+  <div class="grid place-items-center">
+    <div class="max-w-lg">
+     
+      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+        Built on mature technology
+      </h3>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+       Ensure not just secure, authenticated interactions between services,
+        but also interoperability with existing systems by relying on standards
+        and widely used technologies.
+      </p>
+
+      <ul class="grid mt-6 text-left gap-y-4">
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Identities are SPIFFE based</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Uses X509 certificates</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">mTLS over kTLS</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Verified identities are securely exchanged for a third-party credentials</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
+    <Picture
+      src={WhyImg2}
+      alt="Feature Image"
+      formats={["avif", "webp"]}
+      loading="lazy"
+    />
+  </div>
+
+  <div class="grid place-items-center">
+    <div class="max-w-lg">
+
+      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+        Application and network agnostic
+      </h3>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+        The platform operates between the application layer and the network
+        layer, making it transparent to both.
+      </p>
+      <ul class="grid mt-6 text-left gap-y-4">
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Runs within the Linux kernel</span>
+        </li>
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Using kTLS for secure transport-layer encryption.</span>
+        </li>
+        
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

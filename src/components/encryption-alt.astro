@@ -1,0 +1,160 @@
+---
+import Badge from "@components/ui/badge.astro";
+import { Picture } from "astro:assets";
+import EncryptionImg1 from "../assets/encryption/encryption-authentication.png";
+import EncryptionImg2 from "../assets/encryption/process-level.png";
+import EncryptionImg3 from "../assets/encryption/3dparty-credentials.png";
+import { Icon } from "astro-icon/components";
+import Link from "@components/ui/link.astro";
+
+const { nomargin } = Astro.props;
+---
+
+<div
+  class:list={[
+    "max-w-4xl mx-auto flex flex-col items-center justify-center",
+    !nomargin && "mt-24",
+  ]}>
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+    Security teams should manage access - Riptides solves the rest
+  </h2>
+  <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+    Riptides is like Okta for Non-Humans
+  </p>
+</div>
+
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center">
+    <Picture
+      src={EncryptionImg1}
+      alt="Posture Image"
+      formats={["avif", "webp"]}
+      loading="lazy"
+    />
+  </div>
+
+  <div class="grid place-items-center">
+    <div class="max-w-lg">
+     
+      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+        Encryption & Authentication
+      </h3>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+       Proactively guards against lateral movements by automatically
+        authenticating and encrypting connections. Works transparently to
+        both the network and application layers.
+      </p>
+
+      <ul class="grid mt-6 text-left gap-y-4">
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Automatically authenticates and encrypts all connectionsg</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Guards against lateral movements</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Transparent to all layers</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Verified identities are securely exchanged for a third-party credentials</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
+    <Picture
+      src={EncryptionImg2}
+      alt="Feature Image"
+      formats={["avif", "webp"]}
+      loading="lazy"
+    />
+  </div>
+
+  <div class="grid place-items-center">
+    <div class="max-w-lg">
+
+      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+        Process-level access control
+      </h3>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+        Enforces access control on the process level to guard against
+        sophisticated malware and insider threats, even if valid, phished
+        credentials are used.
+      </p>
+      <ul class="grid mt-6 text-left gap-y-4">
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Runs within the Linux kernel using kTLS</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Enforces ACL on the process level</span>
+        </li>
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">360 degree visibility</span>
+        </li>
+        
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center">
+    <Picture
+      src={EncryptionImg3}
+      alt="Posture Image"
+      formats={["avif", "webp"]}
+      loading="lazy"
+    />
+  </div>
+
+  <div class="grid place-items-center">
+    <div class="max-w-lg">
+     
+      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+        3rd-party credentials
+      </h3>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+        Unified and automatic third-party credential management. Prevent
+        credentials from being scattered across environments. Provides clear
+        ownership over identities and credentials.
+      </p>
+
+      <ul class="grid mt-6 text-left gap-y-4">
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Automatically 3d party credentials<</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Clear ownership over identities</span>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>

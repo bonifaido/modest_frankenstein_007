@@ -1,0 +1,79 @@
+---
+import Badge from "@components/ui/badge.astro";
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Credential Generation And Distribution",
+    description:
+      "Managed identity with short-lived cryptographic proof to minimize the risks associated with long-term credentials as they automatically expire, reducing the need for manual revocation.",
+    icon: "fluent:document-javascript-24-regular",
+  },
+  {
+    title: "Identity Propagation",
+    description:
+      "Addressing identity propagation and rotation by operating in a layer below the application layer, making it completely abstract to the application.",
+    icon: "fluent:trophy-24-regular",
+  },
+  {
+    title: "Policy enforcement",
+    description:
+      "Fine-grained policy enforcement and access control below the application layer automates policy checks based on cryptographically proven identities, ensuring only authorized services can interact.  ",
+    icon: "fluent:box-24-regular",
+  },
+  {
+    title: "Credential Generation And Distribution",
+    description:
+      "Managed identity with short-lived cryptographic proof to minimize the risks associated with long-term credentials as they automatically expire, reducing the need for manual revocation.",
+    icon: "fluent:document-javascript-24-regular",
+  },
+  {
+    title: "Identity Propagation",
+    description:
+      "Addressing identity propagation and rotation by operating in a layer below the application layer, making it completely abstract to the application.",
+    icon: "fluent:trophy-24-regular",
+  },
+  {
+    title: "Policy enforcement",
+    description:
+      "Fine-grained policy enforcement and access control below the application layer automates policy checks based on cryptographically proven identities, ensuring only authorized services can interact.  ",
+    icon: "fluent:box-24-regular",
+  },
+];
+---
+
+<!-- <div class="mt-16">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    We have got more awesome <span class="text-indigo-600">features</span>
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Use this section to highlight not so important features of your product.
+  </p>
+</div> -->
+<div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+  <Badge color="purple">OUR MISSION</Badge>
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+    Unique solutions for complex technical problems
+  </h2>
+  <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+    Provide a universal and transparent non-human
+    identity solution that secures every connection
+    between workloads and services.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+  {
+    features.map((item) => (
+      <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+        <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
+          <Icon class="text-indigo-500" name={item.icon} size={24} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

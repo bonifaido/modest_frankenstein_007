@@ -2,18 +2,21 @@
 import { Picture, Image } from "astro:assets";
 import Card from "@components/card.astro";
 import IntegrationImg from "../assets/integrations.svg?url";
-import FeatureImgOne from "../assets/features/2.png";
-import FeatureImgTwo from "../assets/features/2.png";
-import FeatureImgThree from "../assets/features/3.png";
+//import IdentityImgOne from "../assets/identity/identity1.png";
+//import IdentityImgTwo from "../assets/identity/identity1.png";
+//import IdentityImgThree from "../assets/identity/identity1.png";
+import PostureImg1 from "../assets/posture/active-monitoring.png";
+import PostureImg2 from "../assets/posture/driverless-discovery.png";
+import PostureImg3 from "../assets/posture/inventory-posture.png";
 ---
 
 <div class="mt-24">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to <span class="text-indigo-600">start a website</span>
+    Discovery and posture using <span class="text-indigo-600">active monitoring and driverless discovery</span>
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    A centralized dashboard allows security teams to view and manage the full inventory of non-human
+    identities and connections.
   </p>
 </div>
 
@@ -21,36 +24,37 @@ import FeatureImgThree from "../assets/features/3.png";
   <Card class="lg:col-span-3" color="purple">
     <Fragment slot="image">
       <Picture
-        src={FeatureImgOne}
-        alt="Feature image"
+        src={PostureImg1}
+        alt="Posture image"
         formats={["avif", "webp"]}
         class="h-full w-full object-contain"
         loading="lazy"
       />
     </Fragment>
-    <span slot="badge">Astroship</span>
-    <span slot="title">Responsive Template</span>
+    <span slot="badge">Monitoring</span>
+    <span slot="title">Active Monitoring</span>
     <span slot="desc">
-      Astroship is a creative and modern mobile responsive website template that
-      helps you create any kind of marketing websites or landing pages.
+      Monitor network traficc to actively detect and inventory non-human credentials in transit, 
+      identifying risks such as shadow credentials and stale tokens in real time for an improved security posture.
     </span>
   </Card>
   <Card class="lg:col-span-2" color="indigo">
     <Fragment slot="image">
       <Picture
-        src={FeatureImgTwo}
-        alt="Feature image"
+        src={PostureImg2}
+        alt="Posture image"
         formats={["avif", "webp"]}
         class="h-full w-full object-contain"
         loading="lazy"
       />
     </Fragment>
-    <span slot="badge">Creative</span>
-    <span slot="title">Next Level Template</span>
+    <span slot="badge">Discovery</span>
+    <span slot="title">Driverless Discovery</span>
     <span slot="desc">
-      Astroship is a new kind of website template that integrates your favorite
-      tools and workflows.</span
-    >
+      Integration with third-party providers to automatically inventory non-human credentials from existing systems. 
+      Driverless discovery complements active monitoring by continuously updating the credential inventory 
+      ensuring comprehensive visibility.
+    </span>
   </Card>
 </div>
 
@@ -58,38 +62,24 @@ import FeatureImgThree from "../assets/features/3.png";
   <Card color="indigo" size="sm">
     <Fragment slot="image">
       <Picture
-        src={FeatureImgThree}
-        alt="Feature image"
+        src={PostureImg3}
+        alt="Posture image"
         formats={["avif", "webp"]}
         class="h-full w-full object-contain"
         loading="lazy"
       />
     </Fragment>
-    <span slot="badge">Template</span>
-    <span slot="title">Modern Design</span>
+    <span slot="badge">Inventory</span>
+    <span slot="title">Inventory & Posture</span>
     <span slot="desc">
-      Feeling old? Try this template and be a part of the modern design.</span
+      Centralized dashboard allows security teams to view and manage the
+        full inventory of non-human credentials and connections, along with
+        their associated risk posture. This helps assess and prioritize security
+        risks, enabling faster remediation of issues.</span
     >
   </Card>
 
-  <Card color="purple" size="sm">
-    <Fragment slot="image">
-      <Picture
-        src={FeatureImgTwo}
-        alt="Feature image"
-        formats={["avif", "webp"]}
-        class="h-full w-full object-contain"
-        loading="lazy"
-      />
-    </Fragment>
-    <span slot="badge">Product</span>
-    <span slot="title">Highlight Features</span>
-    <span slot="desc">
-      You can highlight your features in a trendy grid like this one.</span
-    >
-  </Card>
-
-  <Card size="sm">
+   <Card size="sm">
     <Fragment slot="image">
       <!-- // svg image. cannot use <picture/> as of now -->
       <Image
@@ -107,4 +97,23 @@ import FeatureImgThree from "../assets/features/3.png";
       Astroship can be integrated with hundreds of tools using Zapier.</span
     >
   </Card>
+
+  <Card color="purple" size="sm">
+    <Fragment slot="image">
+      <Picture
+        src={PostureImg2}
+        alt="Feature image"
+        formats={["avif", "webp"]}
+        class="h-full w-full object-contain"
+        loading="lazy"
+      />
+    </Fragment>
+    <span slot="badge">Posture</span>
+    <span slot="title">Highlight Features</span>
+    <span slot="desc">
+      You can highlight your features in a trendy grid like this one.</span
+    >
+  </Card>
+
+ 
 </div>
