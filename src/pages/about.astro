@@ -9,6 +9,7 @@ import EmployeeImg from "../assets/employee.jpg";
 import Logos from "@components/logos.astro";
 import { Icon } from "astro-icon/components";
 import Cta from "@components/cta.astro";
+import IdentityImg2 from "../assets/identity/riptides.png";
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -19,12 +20,10 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 <Layout title="About" footerMargin={false}>
   <Container>
     <Sectionhead>
-      <Fragment slot="badge">ABOUT US</Fragment>
-      <Fragment slot="title">We're Building Future</Fragment>
+      <Fragment slot="badge">About Riptides</Fragment>
+      <Fragment slot="title">The Future of NHI</Fragment>
       <Fragment slot="desc">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special..
+        Riptides is a comprehensive solution for securing workload-to-workload communication, with identity as its foundation.
       </Fragment>
     </Sectionhead>
     <div class="mt-6 text-center">
@@ -46,7 +45,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         </div>
         <Picture
           formats={["avif", "webp"]}
-          src={EmployeeImg}
+          src={IdentityImg2}
           alt="Happy Team"
           class="rounded-xl w-full max-w-md mx-auto shadow-2xl"
           loading="lazy"
@@ -59,27 +58,27 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
           <strong>Mission</strong>
         </h2>
         <p class="text-lg max-w-xl mt-4 leading-relaxed text-slate-500">
-          We're a multi-cultural team from around the world! We come from
-          diverse backgrounds, bringing different personalities, experiences and
-          skills to the job. This is what makes our team so special.
+          Provide a universal and transparent non-human
+          identity solution that secures every connection
+          between workloads and services.
         </p>
         <ul class="grid mt-6 text-left gap-y-4">
           <li class="flex items-center gap-3 text-slate-800">
             <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
-            <span class="text-slate-600">Intelligent Task Management</span>
+            <span class="text-slate-600">Seamless and proactive identity security</span>
           </li>
 
           <li class="flex items-center gap-3 text-slate-800">
             <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
-            <span class="text-slate-600">Real-time Collaboration</span>
+            <span class="text-slate-600">Zero trust, transport-level encryption/span>
           </li>
 
           <li class="flex items-center gap-3 text-slate-800">
             <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
-            <span class="text-slate-600">Data Security & Privacy</span>
+            <span class="text-slate-600">Strong Standards-based Interoperability</span>
           </li>
         </ul>
       </div>

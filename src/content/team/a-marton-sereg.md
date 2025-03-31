@@ -1,11 +1,11 @@
 ---
 draft: false
-name: "Janette Lynch"
-title: "Senior Director"
+name: "Marton Sereg"
+title: "CEO"
 avatar:
   {
     src: "https://images.unsplash.com/photo-1553514029-1318c9127859?&fit=crop&w=280",
-    alt: "Janette Lynch",
+    alt: "Marton Sereg",
   }
-publishDate: "2023-09-07 15:39"
+publishDate: "2025-03-01 15:39"
 ---
