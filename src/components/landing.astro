@@ -18,6 +18,8 @@ const { nomargin } = Astro.props;
       src={IdentityImg1}
       alt="Identity Image"
       formats={["avif", "webp"]}
+      sizes="(max-width: 1024px) 100vw, 50vw"
+      widths={[240, 540, 720, IdentityImg1.width]}
       loading="lazy"
     />
   </div>
