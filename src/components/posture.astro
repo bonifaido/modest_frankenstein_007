@@ -1,79 +1,146 @@
 ---
 import Badge from "@components/ui/badge.astro";
+import { Picture } from "astro:assets";
+import PostureImg1 from "../assets/posture/active-monitoring.png";
+import PostureImg2 from "../assets/posture/driverless-discovery.png";
+import PostureImg3 from "../assets/posture/inventory-posture.png";
 import { Icon } from "astro-icon/components";
+import Link from "@components/ui/link.astro";
+import HeroSmall from "@components/hero-small.astro";
 
-const features = [
-  {
-    title: "Bring Your Own Framework",
-    description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "fluent:document-javascript-24-regular",
-  },
-  {
-    title: "100% Static HTML, No JS",
-    description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "fluent:trophy-24-regular",
-  },
-  {
-    title: "On-Demand Components",
-    description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "fluent:box-24-regular",
-  },
-  {
-    title: "Broad Integration",
-    description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "fluent:box-multiple-24-regular",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "fluent:book-search-24-regular",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "fluent:people-community-24-regular",
-  },
-];
+const { nomargin } = Astro.props;
 ---
 
-<!-- <div class="mt-16">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    We have got more awesome <span class="text-indigo-600">features</span>
-  </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Use this section to highlight not so important features of your product.
-  </p>
-</div> -->
-<!-- div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
-  <Badge color="purple">MORE FEATURES</Badge>
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-    We've got you covered
-  </h2>
-  <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-    Our template covers all things SAAS. If you don't find what you're looking
-    for, contact us and we'll either help you or steer you in the right
-    direction.
-  </p>
-</div -->
+<HeroSmall nomargin="{nomargin}" />
 
-<!-- div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
-  {
-    features.map((item) => (
-      <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
-        <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center  p-2 w-10 h-10 shrink-0">
-          <Icon class="text-indigo-500" name={item.icon} size={24} />
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-        </div>
-      </div>
-    ))
-  }
-</div -->
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center">
+    <Picture
+      src={PostureImg1}
+      alt="Posture Image"
+      formats={["avif", "webp"]}
+      loading="lazy"
+    />
+  </div>
+
+  <div class="grid place-items-center">
+    <div class="max-w-lg">
+      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+        Active Monitoring
+      </h3>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+        Monitor network traficc to actively detect and inventory non-human
+        credentials in transit, identifying risks such as shadow credentials and
+        stale tokens in real time for an improved security posture.
+      </p>
+
+      <ul class="grid mt-6 text-left gap-y-4">
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">OpenTelemetry based connection traceing</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Inventory of credentials in transit</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm"
+            >Verified identities are securely exchanged for a third-party
+            credentials</span
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center pb-10 md:pb-0 md:order-2">
+    <Picture
+      src={PostureImg2}
+      alt="Feature Image"
+      formats={["avif", "webp"]}
+      loading="lazy"
+    />
+  </div>
+
+  <div class="grid place-items-center">
+    <div class="max-w-lg">
+      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+        Driverless Discovery
+      </h3>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+        Integration with third-party providers to automatically inventory
+        non-human credentials from existing systems. Driverless discovery
+        complements active monitoring by continuously updating the credential
+        inventory ensuring comprehensive visibility.
+      </p>
+      <ul class="grid mt-6 text-left gap-y-4">
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Integration with 3d parties</span>
+        </li>
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">360 degree visibility</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center">
+    <Picture
+      src={PostureImg3}
+      alt="Posture Image"
+      formats={["avif", "webp"]}
+      loading="lazy"
+    />
+  </div>
+
+  <div class="grid place-items-center">
+    <div class="max-w-lg">
+      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+        Inventory & Posture
+      </h3>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+        Centralized dashboard allows security teams to view and manage the full
+        inventory of non-human credentials and connections, along with their
+        associated risk posture. This helps assess and prioritize security
+        risks, enabling faster remediation of issues.
+      </p>
+
+      <ul class="grid mt-6 text-left gap-y-4">
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Centralized dashboard</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm"
+            >Full inventory of non-human credentials and connections</span
+          >
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm">Services catalog and discovery integration</span
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

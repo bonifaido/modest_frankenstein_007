@@ -1,0 +1,17 @@
+---
+const { nomargin } = Astro.props;
+---
+
+<div
+    class:list={[
+        "max-w-4xl mx-auto flex flex-col items-center justify-center",
+        !nomargin && "mt-24",
+    ]}
+>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
+        Security teams manage access<br />Riptides takes care of the rest
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        Riptides secures digital identities beyond humans
+    </p>
+</div>

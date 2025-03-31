@@ -51,22 +51,28 @@ const footermenu = {
 ---
 
 <footer
-  class:list={[
-    "py-14 bg-slate-100 border-t border-slate-100",
-    margin && "mt-10",
-  ]}
+  class:list={["py-14 bg-black border-t border-black", margin && "mt-10"]}
 >
   <Container>
     <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
       <div class="sm:col-span-2 md:col-span-3 lg:col-span-2">
         <a href="/" class="text-lg flex items-center">
-          <img src="/logo-black.png" alt="Riptides" style="width: 150px;" />
+          <img src="/logo-white.png" alt="Riptides" style="width: 150px;" />
         </a>
-        <p class="mt-4 text-sm text-slate-700 max-w-xs">
+        <p class="mt-4 text-sm text-white/80 max-w-xs">
           Riptides is a comprehensive solution for securing workload-to-workload
           communication, with identity as its foundation.
         </p>
         <div class="flex gap-3 mt-4 items-center">
+          <a
+            href="https://twitter.com/riptidesio"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500"
+          >
+            <Icon name="bx:bxl-twitter" class="w-4 h-4" />
+            <span class="sr-only">Twitter</span></a
+          >
           <a
             href="https://github.com/riptideslabs"
             target="_blank"
@@ -89,13 +95,13 @@ const footermenu = {
         </div>
       </div>
       <div>
-        <h3 class="font-medium text-sm text-slate-800">Company</h3>
+        <h3 class="font-medium text-sm text-white">Company</h3>
         <div class="flex flex-col mt-3">
           {
             footermenu.company.map((item) => (
               <a
                 href={item.path || "#"}
-                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                class="py-2 text-sm text-white/70 hover:text-white/90"
               >
                 {item.title}
               </a>
@@ -104,13 +110,13 @@ const footermenu = {
         </div>
       </div>
       <div>
-        <h3 class="font-medium text-sm text-slate-800">Platform</h3>
+        <h3 class="font-medium text-sm text-white">Platform</h3>
         <div class="flex flex-col mt-3">
           {
             footermenu.product.map((item) => (
               <a
                 href={item.path || "#"}
-                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                class="py-2 text-sm text-white/70 hover:text-white/90"
               >
                 {item.title}
               </a>
@@ -119,13 +125,13 @@ const footermenu = {
         </div>
       </div>
       <div>
-        <h3 class="font-medium text-sm text-slate-800">Legal</h3>
+        <h3 class="font-medium text-sm text-white">Legal</h3>
         <div class="flex flex-col mt-3">
           {
             footermenu.resources.map((item) => (
               <a
                 href={item.path || "#"}
-                class="py-2 text-sm text-slate-600 hover:text-indigo-600"
+                class="py-2 text-sm text-white/70 hover:text-white/90"
               >
                 {item.title}
               </a>
@@ -136,9 +142,9 @@ const footermenu = {
     </div>
   </Container>
 
-  <div class="mt-14 pt-8 px-5 border-t border-slate-200">
+  <div class="mt-14 pt-8 px-5">
     <Container>
-      <p class="text-center text-sm text-slate-600 [text-wrap:balance]">
+      <p class="text-center text-sm text-white [text-wrap:balance]">
         Copyright © {new Date().getFullYear()} Riptides Labs. All rights reserved.
       </p>
     </Container>

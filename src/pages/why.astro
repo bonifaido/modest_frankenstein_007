@@ -2,18 +2,14 @@
 import Container from "@components/container.astro";
 import Cta from "@components/cta.astro";
 import FeatureAlt from "@components/why-alt.astro";
-//import FeatureGrid from "@components/feature-grid.astro";
-import Why from "@components/why.astro";
-import { default as FeaturesBlock } from "@components/identity.astro";
+import WhyPage from "@components/why.astro";
 import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout footerMargin={false}>
   <Container class="mt-16">
     <FeatureAlt nomargin={true} />
-    <!-- FeatureGrid / -->
-    <Why />
-    <FeaturesBlock />
+    <WhyPage />
   </Container>
   <Cta />
 </Layout>

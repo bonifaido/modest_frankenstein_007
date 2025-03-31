@@ -5,22 +5,12 @@ import WhyImg1 from "../assets/why/mature-tech.png";
 import WhyImg2 from "../assets/why/agnostic.png";
 import { Icon } from "astro-icon/components";
 import Link from "@components/ui/link.astro";
+import HeroSmall from "@components/hero-small.astro";
 
 const { nomargin } = Astro.props;
 ---
 
-<div
-  class:list={[
-    "max-w-4xl mx-auto flex flex-col items-center justify-center",
-    !nomargin && "mt-24",
-  ]}>
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
-    Security teams should manage access - Riptides solves the rest
-  </h2>
-  <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-    Riptides is like Okta for Non-Humans
-  </p>
-</div>
+<HeroSmall nomargin={nomargin} />
 
 <div class="grid md:grid-cols-2 py-10">
   <div class="grid place-items-center">
@@ -34,14 +24,13 @@ const { nomargin } = Astro.props;
 
   <div class="grid place-items-center">
     <div class="max-w-lg">
-     
       <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
         Built on mature technology
       </h3>
       <p class="mt-4 text-slate-600 [text-wrap:balance]">
-       Ensure not just secure, authenticated interactions between services,
-        but also interoperability with existing systems by relying on standards
-        and widely used technologies.
+        Ensure not just secure, authenticated interactions between services, but
+        also interoperability with existing systems by relying on standards and
+        widely used technologies.
       </p>
 
       <ul class="grid mt-6 text-left gap-y-4">
@@ -66,7 +55,10 @@ const { nomargin } = Astro.props;
         <li class="flex items-center gap-3 text-neutral-800">
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
-          <span class="text-sm">Verified identities are securely exchanged for a third-party credentials</span>
+          <span class="text-sm"
+            >Verified identities are securely exchanged for a third-party
+            credentials</span
+          >
         </li>
       </ul>
     </div>
@@ -85,7 +77,6 @@ const { nomargin } = Astro.props;
 
   <div class="grid place-items-center">
     <div class="max-w-lg">
-
       <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
         Application and network agnostic
       </h3>
@@ -94,7 +85,6 @@ const { nomargin } = Astro.props;
         layer, making it transparent to both.
       </p>
       <ul class="grid mt-6 text-left gap-y-4">
-
         <li class="flex items-center gap-3 text-neutral-800">
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
@@ -103,12 +93,11 @@ const { nomargin } = Astro.props;
         <li class="flex items-center gap-3 text-neutral-800">
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
-          <span class="text-sm">Using kTLS for secure transport-layer encryption.</span>
+          <span class="text-sm"
+            >Using kTLS for secure transport-layer encryption.</span
+          >
         </li>
-        
       </ul>
-      </div>
     </div>
   </div>
 </div>
-
