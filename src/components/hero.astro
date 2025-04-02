@@ -5,23 +5,22 @@ import Link from "@components/ui/link.astro";
 import Container from "@components/container.astro";
 ---
 
-<div class="overflow-x-clip">
+<div class="overflow-x-clip py-24">
   <Container>
-    <main class="grid lg:grid-cols-5 mt-10 place-items-center relative">
-      <div class="max-w-sm md:max-w-max lg:col-span-2">
+    <main class="flex flex-col items-center text-center">
+      <div class="max-w-3xl">
         <h1
-          class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start"
+          class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance]"
         >
-          Automatic Non-Human Identities for Secure Service Communication
+          Trust Every Connection. Even the Autonomous Ones.
         </h1>
         <p
-          class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start"
+          class="text-lg mt-4 max-w-2xl mx-auto text-slate-600 [text-wrap:balance]"
         >
-          Riptides is a comprehensive solution for securing workload-to-workload
-          communication, with identity as its foundation.
+          Riptides is the non-human identity fabric for your workloads and AI agents.
         </p>
         <div
-          class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3"
+          class="mt-10 flex flex-col sm:flex-row justify-center gap-3"
         >
           <Link
             href="/contact"
@@ -29,19 +28,20 @@ import Container from "@components/container.astro";
             class="flex gap-1 items-center justify-center"
             rel="noopener"
           >
-            Contact Us
+            Join the Waitlist
           </Link>
         </div>
       </div>
-      <div class="py-3 lg:col-span-3 lg:-mr-0 place-items-top">
+      <div class="mt-12 max-w-6xl">
         <Picture
           src={heroImage}
           alt="Riptides platform"
           formats={["avif", "webp"]}
-          sizes="(max-width: 1024px) 100vw, 50vw"
+          sizes="(max-width: 1024px) 100vw, 70vw"
           widths={[240, 540, 720, heroImage.width]}
           loading="eager"
           fetchpriority="high"
+          class="w-full h-auto"
         />
       </div>
     </main>

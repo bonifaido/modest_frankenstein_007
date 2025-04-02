@@ -1,4 +1,5 @@
 ---
+import Badge from "@components/ui/badge.astro";
 const { nomargin } = Astro.props;
 ---
 
@@ -8,10 +9,11 @@ const { nomargin } = Astro.props;
         !nomargin && "mt-24",
     ]}
 >
+    <!-- <Badge color="purple" class="mb-4">Unified Identity Fabric</Badge> -->
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
-        Security teams manage access<br />Riptides takes care of the rest
+        Stop scattering secrets, start trusting identities.
     </h2>
-    <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
-        Riptides secures digital identities beyond humans
-    </p>
+    <!-- <p class="text-lg mt-4 text-slate-600 text-center [text-wrap:pretty]">
+        Riptides is a single source of identity for every service, agent, and API.
+    </p> -->
 </div>
