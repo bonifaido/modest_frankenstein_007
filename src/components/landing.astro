@@ -6,33 +6,44 @@ import IdentityImg2 from "../assets/identity/riptides.png";
 import { Icon } from "astro-icon/components";
 import Link from "@components/ui/link.astro";
 import HeroSmall from "@components/hero-small.astro";
+import Card from "@components/card.astro";
+import PostureImg1 from "../assets/posture/active-monitoring.png";
+import PostureImg2 from "../assets/posture/driverless-discovery.png";
+import PostureImg3 from "../assets/posture/inventory-posture.png";
 
 const { nomargin } = Astro.props;
 ---
 
 <HeroSmall />
 
-<div class="grid md:grid-cols-2 py-10">
+<div class="grid md:grid-cols-2 py-10 gap-8">
   <div class="grid place-items-center">
     <Picture
       src={IdentityImg1}
       alt="Identity Image"
       formats={["avif", "webp"]}
-      sizes="(max-width: 1024px) 100vw, 50vw"
+      sizes="(max-width: 1024px) 60vw, 30vw"
       widths={[240, 540, 720, IdentityImg1.width]}
       loading="lazy"
+      class="max-w-lg w-full h-auto"
     />
   </div>
 
   <div class="grid place-items-center">
-    <div class="max-w-lg">
+    <div class="max-w-4xl">
+      <Badge color="purple" class="mb-4">Unified Identity Fabric</Badge>
       <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-        The Non-Human Identities ecoystem is fragmented.
+        Secure every connection with a single source of identity.
       </h3>
       <p class="mt-4 text-slate-600 [text-wrap:balance]">
-        Partial or incomplete solutions impose limitations on the current
-        landscape, restricting progress, innovation, and the ability to address
-        challenges effectively.
+        Today's infrastructure is a mess of credentials. API keys hardcoded into CI pipelines.
+        Long-lived service account tokens buried in config files. TLS certs expiring in the middle of a deploy.
+        <br/>
+        Every system has its own way of proving who it is. Every team has its own way of managing access.
+        And every connection is a potential blind spot — or worse, a breach waiting to happen.
+        <br/>
+        <br/>
+        <b>Riptides changes that.</b>
       </p>
 
       <ul class="grid mt-6 text-left gap-y-4">
@@ -40,8 +51,7 @@ const { nomargin } = Astro.props;
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
           <span class="text-sm"
-            >Modern IT infrastructure spans on-prem, VM, cloud- native, and
-            SaaS.</span
+            >Automatic identity generation & distribution</span
           >
         </li>
 
@@ -49,7 +59,7 @@ const { nomargin } = Astro.props;
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
           <span class="text-sm"
-            >Non-human credentials are scattered across organizations.</span
+            >Eliminate static tokens, passwords, and API keys</span
           >
         </li>
 
@@ -57,7 +67,8 @@ const { nomargin } = Astro.props;
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
           <span class="text-sm"
-            >IAM solutions are designed for human users.</span>
+            >Full audit trail for every service-to-service interaction</span
+          >
         </li>
 
         
@@ -65,11 +76,19 @@ const { nomargin } = Astro.props;
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
           <span class="text-sm"
-            >AI agents lacks security, trusted agent identities are essential to prevent exploitation.</span
+            >Federated trust between internal and third-party systems</span
           >
         </li>
 
       </ul>
+      <div class="mt-8">
+        <a
+          href="/contact"
+          class="inline-block px-6 py-3 text-base font-medium text-slate-700 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors"
+        >
+          Book a Demo
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -81,17 +100,20 @@ const { nomargin } = Astro.props;
       alt="Feature Image"
       formats={["avif", "webp"]}
       loading="lazy"
+      class="max-w-lg w-full h-auto"
     />
   </div>
 
-  <div class="grid place-items-center">
-    <div class="max-w-lg">
+  <div class="grid place-items-center md:pl-32">
+    <div class="max-w-4xl">
+      <Badge color="purple" class="mb-4">SPIFFE-native</Badge>
       <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
-        Seamless credential security
+        Standards-First. Zero Dev Disruption.
       </h3>
       <p class="mt-4 text-slate-600 [text-wrap:balance]">
-        Riptides is a comprehensive solution for securing workload-to-workload
-        communication, with identity as its foundation.
+        Riptides is built on open standards like mTLS and SPIFFE, and does the heavy lifting in the Linux Kernel, so it fits cleanly into your existing stack — from Kubernetes to bare metal.
+        Our drivers handle identity issuance and renewal transparently, and your services don't need to change a line of code.
+It's like having an internal CA, secrets manager, and identity-aware proxy — all rolled into one.
       </p>
       <ul class="grid mt-6 text-left gap-y-4">
         <li class="flex items-center gap-3 text-neutral-800">
@@ -114,10 +136,348 @@ const { nomargin } = Astro.props;
           <Icon name="ph:check-circle-fill" class="w-5 h-5" />
 
           <span class="text-sm"
-            >Supports authentication with SPIFFE workload identities.</span>
+            >Supports authentication with SPIFFE workload identities.</span
+          >
         </li>
 
       </ul>
+      <div class="mt-8">
+        <a
+          href="/contact"
+          class="inline-block px-6 py-3 text-base font-medium text-slate-700 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors"
+        >
+          Book a Demo
+        </a>
+      </div>
     </div>
   </div>
+</div>
+
+<div class="grid md:grid-cols-2 py-10 gap-8">
+  <div class="grid place-items-center">
+    <Picture
+      src={IdentityImg1}
+      alt="Identity Image"
+      formats={["avif", "webp"]}
+      sizes="(max-width: 1024px) 60vw, 30vw"
+      widths={[240, 540, 720, IdentityImg1.width]}
+      loading="lazy"
+      class="max-w-lg w-full h-auto"
+    />
+  </div>
+
+  <div class="grid place-items-center">
+    <div class="max-w-4xl">
+      <Badge color="purple" class="mb-4">AI-Native</Badge>
+      <h3 class="text-2xl font-medium mt-4 [text-wrap:balance]">
+        Let AI agents act with confidence — and limits.
+      </h3>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+        With standards like Anthropic's MCP, agents can autonomously call tools, interact with APIs, and access sensitive data — which makes identity and access control a critical challenge.
+        <br/>
+        Riptides plugs directly into your agent infrastructure, issuing verifiable, short-lived identities to every agent.
+        So whether it's your internal LLM-powered tool or a third-party autonomous agent, access is always governed, scoped, and logged.
+      </p>
+
+      <ul class="grid mt-6 text-left gap-y-4">
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm"
+            >Automatic identity generation & distribution</span
+          >
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm"
+            >Eliminate static tokens, passwords, and API keys</span
+          >
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm"
+            >Full audit trail for every service-to-service interaction</span
+          >
+        </li>
+
+        
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span class="text-sm"
+            >Federated trust between internal and third-party systems</span
+          >
+        </li>
+
+      </ul>
+      <div class="mt-8">
+        <a
+          href="/contact"
+          class="inline-block px-6 py-3 text-base font-medium text-slate-700 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors"
+        >
+          Book a Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="max-w-4xl mx-auto text-center mt-32">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Features for Security Teams.
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Riptides puts access control in the hands of platform and security teams — and takes care of the rest.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+    <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+      <Icon class="text-indigo-500" name="ph:key-fill" size={24} />
+    </div>
+    <div>
+      <h3 class="font-semibold text-lg">SPIFFE Integration</h3>
+      <p class="text-slate-500 mt-2 leading-relaxed">
+        Native integration with SPIFFE for secure identity management.
+      </p>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+    <div class="mt-1 bg-purple-50 border shadow shadow-purple-100/50 border-purple-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+      <Icon class="text-purple-500" name="ph:lock-fill" size={24} />
+    </div>
+    <div>
+      <h3 class="font-semibold text-lg">Credential Rotation</h3>
+      <p class="text-slate-500 mt-2 leading-relaxed">
+        Automated credential rotation and management.
+      </p>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+    <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+      <Icon class="text-indigo-500" name="ph:chart-line-fill" size={24} />
+    </div>
+    <div>
+      <h3 class="font-semibold text-lg">Real-time Monitoring</h3>
+      <p class="text-slate-500 mt-2 leading-relaxed">
+        Continuous monitoring of identity usage and access patterns.
+      </p>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+    <div class="mt-1 bg-purple-50 border shadow shadow-purple-100/50 border-purple-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+      <Icon class="text-purple-500" name="ph:clipboard-text-fill" size={24} />
+    </div>
+    <div>
+      <h3 class="font-semibold text-lg">Audit Logging</h3>
+      <p class="text-slate-500 mt-2 leading-relaxed">
+        Comprehensive audit logs for all identity operations.
+      </p>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+    <div class="mt-1 bg-indigo-50 border shadow shadow-indigo-100/50 border-indigo-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+      <Icon class="text-indigo-500" name="ph:code-fill" size={24} />
+    </div>
+    <div>
+      <h3 class="font-semibold text-lg">API Access</h3>
+      <p class="text-slate-500 mt-2 leading-relaxed">
+        RESTful API for seamless integration with existing tools.
+      </p>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-4 items-start group hover:bg-slate-50 hover:border-slate-100 border border-transparent rounded-lg transition-all md:-m-5 p-5">
+    <div class="mt-1 bg-purple-50 border shadow shadow-purple-100/50 border-purple-100 transition-colors rounded-lg grid place-items-center p-2 w-10 h-10 shrink-0">
+      <Icon class="text-purple-500" name="ph:robot-fill" size={24} />
+    </div>
+    <div>
+      <h3 class="font-semibold text-lg">Workflow Automation</h3>
+      <p class="text-slate-500 mt-2 leading-relaxed">
+        Automated workflows for identity lifecycle management.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="max-w-4xl mx-auto text-center mt-32">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Integrations
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Connect with your existing infrastructure and tools.
+  </p>
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 mt-16 gap-x-10 gap-y-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+    <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
+      <Icon name="ph:cloud-fill" class="w-8 h-8 text-indigo-600" />
+    </div>
+    <h3 class="text-xl lg:text-2xl font-medium mt-4">Kubernetes</h3>
+    <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+      Native integration with Kubernetes for workload identity management.
+    </p>
+    <div class="mt-3">
+      <a href="#" class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+        View Integration
+        <span class="absolute inset-0" />
+      </a>
+    </div>
+  </div>
+
+  <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+    <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
+      <Icon name="ph:robot-fill" class="w-8 h-8 text-indigo-600" />
+    </div>
+    <h3 class="text-xl lg:text-2xl font-medium mt-4">AI Agents</h3>
+    <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+      Secure identity management for AI agents and autonomous systems.
+    </p>
+    <div class="mt-3">
+      <a href="#" class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+        View Integration
+        <span class="absolute inset-0" />
+      </a>
+    </div>
+  </div>
+
+  <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+    <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
+      <Icon name="ph:database-fill" class="w-8 h-8 text-indigo-600" />
+    </div>
+    <h3 class="text-xl lg:text-2xl font-medium mt-4">Databases</h3>
+    <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+      Secure access to databases with identity-based authentication.
+    </p>
+    <div class="mt-3">
+      <a href="#" class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+        View Integration
+        <span class="absolute inset-0" />
+      </a>
+    </div>
+  </div>
+
+  <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+    <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
+      <Icon name="ph:code-fill" class="w-8 h-8 text-indigo-600" />
+    </div>
+    <h3 class="text-xl lg:text-2xl font-medium mt-4">APIs</h3>
+    <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+      Secure API access with identity-based authentication.
+    </p>
+    <div class="mt-3">
+      <a href="#" class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+        View Integration
+        <span class="absolute inset-0" />
+      </a>
+    </div>
+  </div>
+
+  <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+    <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
+      <Icon name="ph:lock-fill" class="w-8 h-8 text-indigo-600" />
+    </div>
+    <h3 class="text-xl lg:text-2xl font-medium mt-4">IAM</h3>
+    <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+      Integrate with existing IAM systems for unified identity management.
+    </p>
+    <div class="mt-3">
+      <a href="#" class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+        View Integration
+        <span class="absolute inset-0" />
+      </a>
+    </div>
+  </div>
+
+  <div class="rounded-2xl relative flex items-center flex-col p-6 group bg-white transition ring-2 ring-slate-200/50 shadow hover:ring-slate-200 hover:shadow-md">
+    <div class="ring-2 ring-slate-200/50 w-16 h-16 group-hover:ring-slate-200 transition shadow shadow-slate-100 rounded-lg grid place-items-center -mt-16 bg-white">
+      <Icon name="ph:chart-line-fill" class="w-8 h-8 text-indigo-600" />
+    </div>
+    <h3 class="text-xl lg:text-2xl font-medium mt-4">Monitoring</h3>
+    <p class="text-slate-600 mt-2 text-center [text-wrap:balance]">
+      Integrate with monitoring tools for identity-aware observability.
+    </p>
+    <div class="mt-3">
+      <a href="#" class="text-sm px-2 transition py-1 text-indigo-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full">
+        View Integration
+        <span class="absolute inset-0" />
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="max-w-4xl mx-auto text-center mt-48">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    From the Blog
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Deep dives on secure identity, AI agent infrastructure, and what's next for machine-to-machine trust.
+  </p>
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 mt-16 gap-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <Card color="indigo">
+    <Fragment slot="image">
+      <Picture
+        src={PostureImg1}
+        alt="Identity Management"
+        formats={["avif", "webp"]}
+        class="h-full w-full object-contain"
+        loading="lazy"
+      />
+    </Fragment>
+    <span slot="badge">Identity</span>
+    <span slot="title">The Riptides Vision: Identity-First Infrastructure</span>
+    <span slot="desc">
+      At Riptides, we believe cryptographic identity should be the default for all machine interactions.
+      This post outlines our vision: getting rid of secret sprawl, empowering platform and security teams, and making identity-based trust transparent, automatic, and scalable.
+    </span>
+  </Card>
+
+  <Card color="purple">
+    <Fragment slot="image">
+      <Picture
+        src={PostureImg2}
+        alt="Credential Security"
+        formats={["avif", "webp"]}
+        class="h-full w-full object-contain"
+        loading="lazy"
+      />
+    </Fragment>
+    <span slot="badge">AI agents</span>
+    <span slot="title">AI Agents, Autonomy, and the Identity Crisis</span>
+    <span slot="desc">
+      Modern AI agents don't ask for permission — they act. As agents gain autonomy through tools like MCP, they're interacting with sensitive systems in real time.
+      We break down why legacy IAM can't keep up, and what a new identity fabric must solve.
+    </span>
+  </Card>
+
+  <Card color="purple">
+    <Fragment slot="image">
+      <Picture
+        src={PostureImg3}
+        alt="Active Monitoring"
+        formats={["avif", "webp"]}
+        class="h-full w-full object-contain"
+        loading="lazy"
+      />
+    </Fragment>
+    <span slot="badge">AI Agents</span>
+    <span slot="title">MCP Needs Identity to Stay Secure</span>
+    <span slot="desc">
+      MCP is quickly becoming the standard for how AI agents communicate with external tools and data sources.
+      But as these agents gain autonomy, every interaction — from fetching sensitive data to triggering real-world actions — must be secured.
+    </span>
+  </Card>
 </div>

@@ -19,20 +19,20 @@ type Color = keyof typeof colors;
 
 <div
   class:list={[
-    "rounded-2xl p-8 bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg",
+    "rounded-2xl p-6 bg-gray-50 transition-all ring-1 ring-gray-200/50 shadow hover:shadow-lg",
     className,
   ]}>
   <div
     class:list={[
       "overflow-hidden flex items-start justify-center h-auto relative",
-      size === "sm" ? "lg:h-60" : "lg:h-80",
+      size === "sm" ? "lg:h-40" : "lg:h-56",
     ]}>
     <div
       class="absolute inset-0 bg-gradient-to-t from-gray-50 via-transparent z-10">
     </div>
     <slot name="image" />
   </div>
-  <div class="mt-2">
+  <div class="mt-0.5">
     {
       Astro.slots.has("badge") && (
         <Badge color={color}>
@@ -41,6 +41,6 @@ type Color = keyof typeof colors;
       )
     }
     <h3 class="text-xl lg:text-2xl font-medium mt-2"><slot name="title" /></h3>
-    <p class="text-slate-600 mt-2 [text-wrap:balance]"><slot name="desc" /></p>
+    <p class="text-slate-600 mt-3 [text-wrap:balance]"><slot name="desc" /></p>
   </div>
 </div>
