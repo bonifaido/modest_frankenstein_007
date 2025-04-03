@@ -7,10 +7,10 @@ image:
     src: "https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?fit=crop&w=600&h=335",
     alt: "alt text",
   }
-publishDate: "2022-11-09 16:39"
+publishDate: "2025-04-03 11:00"
 category: "Courses"
-author: "Marcell Ziemann"
-tags: [webdev, tailwindcss, frontend]
+author: "Janos Matyas"
+tags: [spiffe, identity, zero-trust]
 ---
 
 # Introduction to SPIFFE: Secure Identity for Workloads
